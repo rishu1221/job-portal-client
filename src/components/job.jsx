@@ -56,36 +56,36 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const Job = () => {
+const Job = ({job}) => {
 
     const classes = useStyles();
 
     return (
         <Card className={classes.component}>
             <CardContent className={classes.container}>
-                <Typography className={classes.job}>Client Relationship Executive</Typography>
-                <Typography className={classes.company}>Hero Motors India Pvt Ltd</Typography>
+                <Typography className={classes.job}>job.jobname</Typography>
+                <Typography className={classes.company}>job.compName</Typography>
                 <Typography className={classes.office}><HomeWork className={classes.iconOffice} /> Remote</Typography>
                 <Grid container className={classes.grid}>
                     <Grid item className={classes.grid1} lg={4} md={4} sm={6} xs={6}>
                         <PlayCircleOutline />
                         <Box className={classes.gridData}>
                             <Typography>Start Date</Typography>
-                            <Typography>Immediately</Typography>
+                            <Typography>job.start_date</Typography>
                         </Box>
                     </Grid>
                     <Grid item className={classes.grid2} lg={4} md={4} sm={6} xs={6}>
                         <MoneyOutlined />
                         <Box className={classes.gridData}>
                             <Typography>CTC</Typography>
-                            <Typography>Rs. 3LPA</Typography>
+                            <Typography>job.salary</Typography>
                         </Box>
                     </Grid>
                     <Grid item className={classes.grid3} lg={4} md={4} sm={12} xs={12}>
                         <DateRangeOutlined />
                         <Box className={classes.gridData}>
                             <Typography>Last Date</Typography>
-                            <Typography>25 Oct</Typography>
+                            <Typography>job.last_date</Typography>
                         </Box>
                     </Grid>
                 </Grid>
